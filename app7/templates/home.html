@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<center>
+<h1>HOMEPAGE</h1>
+   <th>{% for msg in messages %}
+     {{msg}}</th><td><tr>
+                    <a href="">
+                    <img src="{{user.Photo.url}}" alt="" width="600em" class="rounded" height="800em"></a>
+                    <h3><b>{{user.Name}}</b></h3>
+                    <h3><b>{{user.Place}}</b></h3>
+                </tr></td> 
+   <a href="{ % url 'app7:update' form.id % }">update</a>
+   {% endfor %}
+   </center>
+{% endblock %}

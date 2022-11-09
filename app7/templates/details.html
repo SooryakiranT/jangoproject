@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<center>
+    <body><div style="margin: 150px;
+        padding: 104p">
+    
+    <header>
+        <h1>DETAILS</h1>
+    </header><td>
+             <tr>
+                <a href="">
+                <img src="{{data.Photo.url}}" alt="" width="600em" class="rounded" height="800em"></a>
+                <h3><b>{{data.Name}}</b></h3>
+                <h3><b>{{data.Place}}</b></h3>
+             </tr>
+             </td>
+        </div>
+    </body>
+</center>
+{% endblock %}

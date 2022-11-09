@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" class="no-js">
+   <head>
+      <!-- Meta -->
+      <title>Home</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Free HTML template">
+      <meta name="keywords" content="HTML, template, free">
+      <meta name="author" content="Nicola Tolin">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Styles -->
+      <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+      <link href="{% static 'vendor/animate/animate.css' %}" rel="stylesheet" type="text/css"/>
+      <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navigation container-fluid">
+       <div class="row justify-content-md-center ">
+          <div class="col-md-10 col-sm-12">
+             <nav class="navbar navbar-default">
+                <a class="navbar-brand" href="home.html">
+                <img src=" " height="22" alt="">
+                </a>
+                <div class="button_container" id="toggle">
+                   <span class="black top"></span>
+                   <span class="black middle"></span>
+                   <span class="black bottom"></span>
+                </div>
+                <div class="overlay" id="overlay">
+                   <nav class="overlay-menu">
+                      <ul>
+                         <li> <a href="{% url 'app7:show_form' %}">signup</a></li>
+                         <li> <a href="{% url 'app7:gallery' %}">gallery</a></li>
+                         <li> <a href="{% url 'app7:login' %}">login</a></li>
+                         <li> <a href="{% url 'app7:index' %}">home</a></li>
+                      </ul>
+                   </nav>
+                </div>
+             </nav>
+          </div>
+       </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+          <!-- Footer -->
+          <hr>
+          <div class="container-fluid footer ">
+            <div class="row">
+               <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12 ">
+                  <p>
+                 <h2>   <a href="{% url 'app7:show_form' %}">sigup</a></h2>
+                   <h2>  <a href="{% url 'app7:gallery' %}">Story</a></h2>
+                   <h2> <a href="{% url 'app7:login' %}">login</a>
+                  <h2>  <a href="{% url 'app7:index' %}">home</a></h2>
+                  </p>
+               </div>
+               <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12 ">
+<style>
+.fa {
+    padding: 10px;
+    font-size: 32px;
+    padding-right: -2px;
+    width: 45px;
+    text-align: center;
+    text-decoration: none;
+    margin: 318px 127px;
+    border-radius: 52px;
+    margin-left: auto;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+               </div>
+            
+
+<!-- Add font awesome icons -->
+<tr>
+<h2><p>connect me on</p></h2>
+<a  href="https://linkedin.com/" class="fa fa-linkedin"></a>
+         <!-- End Footer -->
+         <!-- Javascript -->
+         <script src="{% static 'vendor/jquery.min.js' %}"></script>
+         <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+         <script src="{% static 'vendor/wow/wow.js' %}"></script>
+         <script src="{% static 'js/script.js' %}"></script>
+         <script>
+            new WOW().init();
+         </script>
+         <!-- End Javascript -->
+            </div>
+          </div>
+</body>
+   </html>
